@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(new FormData(form));
 
   try {
-    const res = await fetch("http://localhost:3000/api/login", {
+    const res = await fetch("https://qui-est-la-api.onrender.com/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include", // 🔑 envoie le cookie session

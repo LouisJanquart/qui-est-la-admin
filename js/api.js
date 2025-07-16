@@ -1,8 +1,8 @@
 // Visites
-const BASE_VISITES = "http://localhost:3000/api/visites";
+const BASE_VISITES = "https://qui-est-la-api.onrender.com/api/visites";
 
 // Employés
-const BASE_EMPLOYES = "http://localhost:3000/api/employes";
+const BASE_EMPLOYES = "https://qui-est-la-api.onrender.com/api/employes";
 
 // === VISITES ===
 export async function getVisitesActives() {
@@ -68,7 +68,7 @@ export async function getFormateurs() {
 }
 
 // === FORMATIONS ===
-const BASE_FORMATIONS = "http://localhost:3000/api/formations";
+const BASE_FORMATIONS = "https://qui-est-la-api.onrender.com/api/formations";
 
 export async function getFormations() {
   const res = await fetch(BASE_FORMATIONS);

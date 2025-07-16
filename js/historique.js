@@ -2,7 +2,9 @@ let toutesLesVisites = [];
 
 export async function chargerHistorique() {
   try {
-    const res = await fetch("http://localhost:3000/api/visites/historique");
+    const res = await fetch(
+      "https://qui-est-la-api.onrender.com/api/visites/historique"
+    );
     const data = await res.json();
     toutesLesVisites = data;
     afficherFiltres();
