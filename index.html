@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Qui est là ?</title>
+    <link rel="stylesheet" href="dist/style/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button data-view="actives">Visites actives</button>
+        <button data-view="historique">Historique</button>
+        <button data-view="personnel">Personnel</button>
+        <button data-view="formations">Formations</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Visites actives -->
+      <section id="actives" class="active">
+        <div id="visites-actives" class="grille-visites">
+          <!-- Les cartes de visites seront injectées ici en JS -->
+        </div>
+      </section>
+
+      <!-- Historique -->
+      <section id="historique" class="hidden">
+        <h2>Historique des visites</h2>
+        <!-- La toolbar est injectée dynamiquement -->
+        <div id="historique-list" class="grid"></div>
+      </section>
+
+      <!-- Personnel -->
+      <section id="personnel" class="hidden">
+        <h2>Membres du personnel</h2>
+
+        <div id="personnel-list" class="grid"></div>
+
+        <hr />
+
+        <h3>Ajouter un membre</h3>
+        <form id="ajout-employe-form">
+          <input type="text" name="prenom" placeholder="Prénom" required />
+          <input type="text" name="nom" placeholder="Nom" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="text"
+            name="telephone"
+            placeholder="Téléphone"
+            required
+          />
+          <select name="fonction" required>
+            <option value="">-- Fonction --</option>
+            <option value="formateur">Formateur</option>
+            <option value="administratif">Administratif</option>
+          </select>
+          <input type="text" name="local" placeholder="Local" required />
+          <button type="submit">Ajouter</button>
+        </form>
+      </section>
+
+      <section id="formations" class="hidden">
+        <h2>Formations</h2>
+        <div id="formations-list" class="grid"></div>
+
+        <hr />
+
+        <h3>Ajouter une formation</h3>
+        <form id="ajout-formation-form">
+          <input type="text" name="intitule" placeholder="Intitulé" required />
+          <input type="date" name="date_debut" required />
+          <input type="date" name="date_fin" required />
+          <select name="formateur_id" required>
+            <option value="">-- Formateur --</option>
+            <!-- Options injectées dynamiquement -->
+          </select>
+          <input type="text" name="local" placeholder="Local" required />
+          <button type="submit">Ajouter</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
